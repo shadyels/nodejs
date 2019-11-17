@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadyels/nodejs.git"
+  },
+  "author": "shadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shadyels/nodejs/issues"
+  },
+  "homepage": "https://github.com/shadyels/nodejs#readme"
+}
