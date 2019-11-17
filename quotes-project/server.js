@@ -5,7 +5,12 @@ var app = express();
 //use body parser to access and parse body in post or put requests
 //this is very important if you're passing data instead of just using GET requests
 var bodyParser = require('body-parser');
+
+// this reads Body in xxx-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// this reads Body from a JSON
+app.use(bodyParser.json);
 
 var quotes = [
     {
@@ -54,4 +59,9 @@ app.get('/quotes/:id', function (req, res) {
 app.post('/quotes', function(req, res){
     console.log("Insert a new quote: " + req.body.quote);
     res.json(req.body);
+});
+
+app.delete('/quotes/:id', function (req, res) {
+    console.log('deleting Quote ' + req.params.id);
+    req.send('Deleted quote ' + req.params.id);
 });
